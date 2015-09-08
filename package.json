@@ -1,0 +1,12 @@
+{
+	"name": "quick_multer",
+	"version": "0.0.1",
+	"dependencies": {
+		"express": "~4.10.2",
+		"multer": "~0.1.6"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/langboost/quick-multer.git"
+	}
+}

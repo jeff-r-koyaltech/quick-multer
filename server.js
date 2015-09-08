@@ -1,5 +1,7 @@
 var express=require("express");
 var multer  = require("multer");
+var serveIndex = require('serve-index');
+var serveStatic = require('serve-static');
 var path = require("path");
 var app=express();
 
@@ -29,6 +31,14 @@ app.post('/api/upload',function(req,res){
 		res.end("File uploaded.");
 	}
 });
+
+var uploadsPath = path.join(__dirname, "uploads");
+
+//Send index.html responses for folders
+app.use('/uploads', serveIndex(uploadsPath, {'icons': true}))
+
+//Send static files when requested
+app.use('/uploads', serveStatic(uploadsPath))
 
 /*Run the server.*/
 var port = 3000;

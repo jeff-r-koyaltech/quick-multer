@@ -1,5 +1,6 @@
 {
 	"name": "quick_multer",
+	"license": "GPL-3.0",
 	"version": "0.0.1",
 	"dependencies": {
 		"express": "~4.10.2",
